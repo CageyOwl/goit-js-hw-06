@@ -1,9 +1,9 @@
-const inp = document.querySelector("#name-input");
+const inp = document.querySelector('#name-input');
 
 inp.addEventListener(
-  "input",
+  'input',
   () =>
-    (document.querySelector("#name-output").textContent = inp.value
+    (document.querySelector('#name-output').textContent = inp.value
       ? inp.value
-      : "Anonymous")
+      : 'Anonymous')
 );

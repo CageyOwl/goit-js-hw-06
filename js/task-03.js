@@ -15,28 +15,15 @@ const images = [
 
 // The code starts here
 
-const galleryStyles = {
-  display: "flex",
-  wrap: "wrap",
-  gap: "30px",
-  padding: "15px",
-};
+const gallery = document.querySelector('.gallery');
 
-const gallery = document.querySelector(".gallery");
-for (let s in galleryStyles) {
-  gallery.style[s] = galleryStyles[s];
-}
+const galleryContentStr = images.reduce((outputStr, img) => {
+  outputStr += `<li><img src=${img.url} alt=${img.alt}></li>`;
+  return outputStr;
+}, '');
 
-for (let img of images) {
-  const liImg = document.createElement("img");
-  liImg.src = img.url;
-  liImg.alt = img.alt;
+gallery.insertAdjacentHTML('afterbegin', galleryContentStr);
 
-  const li = document.createElement("li");
-  li.style.flexGrow = "1";
-  liImg.style.width = "100%";
-
-  li.append(liImg);
-
-  gallery.append(li);
-}
+document
+  .querySelectorAll('.gallery img')
+  .forEach((el) => el.classList.add('galleryImg'));

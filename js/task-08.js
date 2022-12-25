@@ -1,6 +1,6 @@
-const form = document.querySelector(".login-form");
+const form = document.querySelector('.login-form');
 
-form.addEventListener("submit", (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const values = {
@@ -9,7 +9,7 @@ form.addEventListener("submit", (event) => {
   };
 
   if (!(values.email && values.password)) {
-    alert("All fields are required");
+    alert('All fields are required!');
   } else {
     console.log(values);
     form.reset();

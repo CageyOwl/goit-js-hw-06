@@ -9,12 +9,13 @@ const ingredients = [
 
 // The code starts here
 
-const ingredientsUL = document.querySelector("#ingredients");
+const ingredientsUL = document.querySelector('#ingredients');
 
-for (let i of ingredients) {
-  const ingredientsItem = document.createElement("li");
-  ingredientsItem.classList.add("item");
+const ingredientsItems = ingredients.map((i) => {
+  const ingredientsItem = document.createElement('li');
+  ingredientsItem.classList.add('item');
   ingredientsItem.textContent = i;
+  return ingredientsItem;
+});
 
-  ingredientsUL.append(ingredientsItem);
-}
+ingredientsUL.append(...ingredientsItems);

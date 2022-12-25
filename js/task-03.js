@@ -15,15 +15,15 @@ const images = [
 
 // The code starts here
 
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector(".gallery");
 
 const galleryContentStr = images.reduce((outputStr, img) => {
   outputStr += `<li><img src=${img.url} alt=${img.alt}></li>`;
   return outputStr;
-}, '');
+}, "");
 
-gallery.insertAdjacentHTML('afterbegin', galleryContentStr);
+gallery.insertAdjacentHTML("afterbegin", galleryContentStr);
 
 document
-  .querySelectorAll('.gallery img')
-  .forEach((el) => el.classList.add('galleryImg'));
+  .querySelectorAll(".gallery img")
+  .forEach((el) => el.classList.add("galleryImg"));

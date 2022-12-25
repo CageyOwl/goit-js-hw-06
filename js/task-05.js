@@ -1,9 +1,8 @@
-const inp = document.querySelector('#name-input');
+const inp = document.querySelector("#name-input");
 
-inp.addEventListener(
-  'input',
-  () =>
-    (document.querySelector('#name-output').textContent = inp.value
-      ? inp.value
-      : 'Anonymous')
-);
+inp.addEventListener("input", () => {
+  const value = inp.value.trim();
+  document.querySelector("#name-output").textContent = value
+    ? value
+    : "Anonymous";
+});

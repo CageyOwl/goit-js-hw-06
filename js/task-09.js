@@ -4,10 +4,10 @@ function getRandomHexColor() {
 
 // The code starts here
 
-const colorCode = document.querySelector('.color');
-const btn = document.querySelector('.change-color');
+const colorCode = document.querySelector(".color");
+const btn = document.querySelector(".change-color");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   colorCode.textContent = getRandomHexColor();
   document.body.style.backgroundColor = `${colorCode.textContent}`;
 });
